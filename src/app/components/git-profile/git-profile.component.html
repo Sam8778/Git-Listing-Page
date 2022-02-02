@@ -1,0 +1,29 @@
+<!-- main - parent div -->
+<div *ngIf="githubProfile" class="main grid px-10 py-4 ">
+    <!--card-->
+    <div class="card bg-white flex flex-col items-center justify-center p-4 shadow-lg rounded-2xl w-64">
+        <!--profile-image-->
+        <div class="profile mx-auto rounded-full py-2 w-16">
+            <img [src]="githubProfile.avatar_url" alt="profile">
+        </div>
+        <!--name-->
+        <div class="name text-gray-800 text-2xl font-medium mt-2 ">
+           <p>{{ githubProfile.name }}</p>
+        </div>
+        <!--username-->
+        <div class="username text-gray-500">
+            <p>Username: {{ githubProfile.login }}</p>
+        </div>
+        <!--location-->
+        <div class="location text-gray-500">
+            <p>{{ githubProfile.location }}</p>
+        </div>
+        <!--bio-->
+        <div class="bio text-gray-700 mt-4">
+            Bio: <p>{{ githubProfile.bio }}</p>
+        </div>
+        
+    </div>
+
+</div>
+
